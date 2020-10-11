@@ -1,17 +1,21 @@
 import React from 'react';
-import Button, { ButtonType, ButtonSize } from './components/Button/button';
+import Button from './components/Button';
+
+function Click(){
+  alert(1);
+}
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Button disabled={true}> Hello  </Button>
-        <Button btnType= {ButtonType.Primary} size={ButtonSize.Large} autoFocus> Hello  </Button>
-        <Button btnType= {ButtonType.Danger} size={ButtonSize.Small}> Hello  </Button>
-        <Button btnType= {ButtonType.Default} size={ButtonSize.Large}> Hello  </Button>
-        <Button btnType= {ButtonType.Default} size={ButtonSize.Small}> Hello  </Button>
-        <Button btnType= {ButtonType.Link} href="https://www.baidu.com" disabled={true}> 百度Link  </Button>
-        <Button btnType= {ButtonType.Link} href="https://www.baidu.com" target="_blank"> 百度Link  </Button>
+        <Button disabled={true} onClick={Click}> Hello  </Button>
+        <Button btnType= {'primary'} size={'lg'} autoFocus> Hello  </Button>
+        <Button btnType= {'primary'} size={'sm'} onClick={Click}> Hello  </Button>
+        <Button btnType= {'default'} size={'lg'}> Hello  </Button>
+        <Button btnType= {'default'} size={'sm'}> Hello  </Button>
+        <Button btnType= {'link'} href="https://www.baidu.com" disabled={true}> 百度Link  </Button>
+        <Button btnType= {'link'} href="https://www.baidu.com" target="_blank"> 百度Link  </Button>
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
